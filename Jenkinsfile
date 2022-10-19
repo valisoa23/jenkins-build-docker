@@ -11,9 +11,9 @@ node{
       app = docker.build("valisoa/nginx")
     }
     stage('Run image'){
-      docker.image('valisoa/nginx').withRun('-p 9001:80 nginx'){ c ->
+      docker.image('valisoa/nginx').withRun('-p 9001:80'){ c ->
         sh 'docker ps'
-        sh 'curl localhost"
+        
       }
     }
 }
